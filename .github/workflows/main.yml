@@ -16,7 +16,7 @@ jobs:
         run: dotnet publish portfolio-aro/portfolio-aro.csproj -c Release -o release --nologo
 
       - name: List Publish Directory Contents
-        run: ls -R ${env.PUBLISH_DIR}
+        run: ls -R $PUBLISH_DIR
 
       - name: Rewrite base href
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
