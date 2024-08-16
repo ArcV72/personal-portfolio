@@ -22,7 +22,7 @@ jobs:
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
         with:
           html_path: ${{ env.PUBLISH_DIR }}/index.html
-          base_href: /personal-portfolio/portfolio-aro/
+          base_href: /portfolio-aro/
 
       - name: GitHub Pages
         if: success()
