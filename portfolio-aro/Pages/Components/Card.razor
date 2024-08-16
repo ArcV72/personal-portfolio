@@ -1,0 +1,25 @@
+﻿<div class="card @card_class" style="width: 18rem; ">
+
+    <h5 class="card-title">@title</h5>
+    <div class="card-img-top">
+        <img src="@image_path" alt="..." style="width:-webkit-fill-available;">
+    </div>
+</div>
+@code {
+    [Parameter] public string? image_path { get; set; }
+    [Parameter] public string? title { get; set; }
+    [Parameter] public string? card_class { get; set; }
+
+    public class CardClass
+    {
+        public const string GAME = "card-games";
+        public const string ANIME = "card-animes";
+    }
+
+}
+
+
+
+<script>
+    document.getElementsByClassName("card-animes")[0].addEventListener("hover", () => { document.body.add("obscure") });
+</script>

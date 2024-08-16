@@ -1,0 +1,22 @@
+﻿@using portfolio_aro.Pages.Components
+
+<h1>Here are some of my favorite </h1>
+
+<div class="d-flex flex-row justify-content-around">
+    <Card image_path="@games_image_path" title="@games_title" card_class="@games_class"></Card>
+    <Card image_path="@animes_image_path" title="@animes_title" card_class="@animes_class"></Card>
+    <Card image_path="@sports_image_path" title="@sports_title"></Card>
+</div>
+
+@code {
+    string games_image_path = ".\\assets\\img\\games-rathalos.png";
+    string games_title = "GAMES";
+    string games_class = Card.CardClass.GAME;
+
+    string animes_image_path = ".\\assets\\img\\manga.png";
+    string animes_title = "MANGA";
+    string animes_class = Card.CardClass.ANIME;
+
+    string sports_image_path = "";
+    string sports_title = "";
+}

@@ -1,0 +1,14 @@
+﻿.portfolio-navbar {
+    width: 100%;
+    background-color: cadetblue;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar{
+    justify-content:flex-end;
+    background: red;
+}

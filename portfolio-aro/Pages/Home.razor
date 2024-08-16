@@ -1,0 +1,68 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div id="welcome" class="section" style="">
+    <h1>Aro Randriamanantena</h1>
+    <h2>Greetings! I'm Aro, a student in my third year of a Bachelor in Computer Science at the IUT Lyon 1 and welcome to my portfolio</h2>
+</div>
+<div id="about-me" class="section">
+    <AboutMe />
+</div>
+<div id="interests" class="section">
+    <Interests />
+</div>
+
+<div id="projects" class="section">
+    <Projects />
+</div>
+
+
+<p>
+    Let's dive into those competences I developed throughout the years!
+</p>
+
+<style>
+    body {
+        color: white;
+        background-color: gray;
+    }
+    
+
+    .section {
+        height:100vh;
+        padding:10%;
+        align-content: center;
+    }
+
+</style>
+
+<style>
+
+    .card {
+        background-color: transparent;
+        transition: filter 0.5s;
+    }
+
+    .card-img-top {
+        height: -webkit-fill-available;
+        align-content: center;
+    }
+
+    .card-games .card-img-top {
+        border: solid yellow 2px;
+    }
+
+    .card-games:hover {
+        filter: drop-shadow(15px 10px 0px #44d) drop-shadow(30px 20px 0px #4dd);
+    }
+
+    .card-animes:hover {
+        box-shadow: inset 0px 0px 40px 40px #DBA632;
+    }
+
+    .card-animes .card-img-top {
+        border: dashed #515151 2px;
+    }
+
+</style>
