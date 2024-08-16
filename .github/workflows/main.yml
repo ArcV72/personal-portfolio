@@ -1,4 +1,7 @@
 name: Deploy to GitHub Pages
+env:
+  PUBLISH_DIR: bin/Release/netstandard2.1/publish/wwwroot
+  
 on:
   push:
     branches: [ master ]
@@ -8,10 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 6.0
-
       - name: Publish .NET Core Project
         run: dotnet publish portfolio-aro/portfolio-aro.csproj -c Release -o release --nologo
+        
+      - name: Rewrite base href
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
+        with:
+          html_path: ${{ env.PUBLISH_DIR }}/index.html
+          base_href: /portfolio-aro/
+
+      - name: GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1.5.1
+        with:
+          target_branch: gh-pages
+          build_dir: ${{ env.PUBLISH_DIR }}
