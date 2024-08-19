@@ -2,30 +2,23 @@
 
 <PageTitle>Home</PageTitle>
 
-<div id="welcome" class="section" style="">
-    <h1>Aro Randriamanantena</h1>
-    <h2>Greetings! I'm Aro, a student in my third year of a Bachelor in Computer Science at the IUT Lyon 1 and welcome to my portfolio</h2>
-</div>
 <div id="about-me" class="section">
     <AboutMe />
 </div>
+
+<div id="competences" class="section">
+    <Competences />
+</div>
+
 <div id="interests" class="section">
     <Interests />
 </div>
 
-<div id="projects" class="section">
-    <Projects />
-</div>
-
-
-<p>
-    Let's dive into those competences I developed throughout the years!
-</p>
-
 <style>
     body {
-        color: white;
-        background-color: gray;
+        background-color: beige;
+        color: black;
+        font-size: 1.25em;
     }
     
 
@@ -33,6 +26,9 @@
         height:100vh;
         padding:10%;
         align-content: center;
+    }
+
+    #about-me {
     }
 
 </style>
@@ -45,7 +41,7 @@
     }
 
     .card-img-top {
-        height: -webkit-fill-available;
+        height: 100%;
         align-content: center;
     }
 

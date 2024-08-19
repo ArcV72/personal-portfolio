@@ -1,8 +1,13 @@
 ﻿@inherits LayoutComponentBase
-<div class="navbar sticky-top">
+
+<MudThemeProvider />
+
+<MudDialogProvider />
+
+<div class="navbar">
     <NavMenu />
 </div>
-<div class="page bg-dark" id="home">
+<div class="page" id="home">
     <main>
         <article class="content">
             @Body
