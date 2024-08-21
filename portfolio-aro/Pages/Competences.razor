@@ -1,58 +1,127 @@
-﻿<h1>Let's dive into the competences I acquired throughout the years!</h1>
+﻿<p>My education allowed me to obtain experience across numerous technologies</p>
+<MudCarousel Style="height: 100px; width: 80%; background: white; border-radius: 100em; margin: 10% !important;" ShowArrows="true" ShowBullets="false" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+    <MudCarouselItem Transition="transition">
+        <div class="carousel-container" style="height:100%">
+            <img src="/assets/techno/logo-blazor.png" alt="logo-blazor" />
+            <img src="/assets/techno/logo-angular.png" alt="logo-angular" />
+            <img src="/assets/techno/logo-vuejs.png" alt="logo-vuejs" />
+            <img src="/assets/techno/logo-symfony.png" alt="logo-symfony" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="carousel-container">
+            <img src="/assets/techno/logo-mysql.svg" alt="logo-mysql" />
+            <img src="/assets/techno/logo-mongodb.png" alt="logo-mongodb" />
+            <img src="/assets/techno/logo-neo4j.png" alt="logo-neo4j" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="carousel-container">
+            <img src="/assets/techno/logo-c.png" alt="logo-c" />
+            <img src="/assets/techno/logo-csharp.png" alt="logo-csharp" />
+            <img src="/assets/techno/logo-java.png" alt="logo-java" />
+            <img src="/assets/techno/logo-python.png" alt="logo-python" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="carousel-container">
+            <img src="/assets/techno/logo-threejs.png" alt="logo-threejs" />
+            <img src="/assets/techno/logo-unity.png" alt="logo-unity" />
+            <img src="/assets/techno/logo-ue.png" alt="logo-ue" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition">
+        <div class="carousel-container">
+            <img src="/assets/techno/logo-nodejs.png" alt="logo-nodejs" />
+            <img src="/assets/techno/logo-spring.png" alt="logo-spring" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+<h1 style="text-align: center;">Let's dive into the competences I acquired across the years!</h1>
 <div style="display: flex;
     justify-content: space-around;
     margin-top: 5%;
     margin-bottom: 5%;">
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #dcf5ed; --hover-bg: #a6e8d2;">
         <span class="material-symbols-outlined">
             terminal
         </span>
         Develop
     </button>
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #dcf5e2; --hover-bg: #9ddbab;">
         <span class="material-symbols-outlined">
             speed
         </span>
         Optimize
     </button>
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #ebf5dc; --hover-bg: #d5e8ba;">
         <span class="material-symbols-outlined">
             assignment
         </span>
         Administer
     </button>
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #f5ebdc; --hover-bg: #ebd2af;">
         <span class="material-symbols-outlined">
             groups
         </span>
         Manage
     </button>
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #f5dce2; --hover-bg: #f0c3ce;">
         <span class="material-symbols-outlined">
             supervisor_account
         </span>
         Lead
     </button>
-    <button class="competence-button">
+    <button class="competence-button" style="--bg-color: #f5dced; --hover-bg: #edc7e1;">
         <span class="material-symbols-outlined">
             partner_exchange
         </span>
         Collaborate
     </button>
+
 </div>
 
 @code {
+    private Transition transition = Transition.Slide;
 
 }
 
 
 <style>
+    .carousel-container {
+        display:flex;    justify-content: space-evenly;height:100%; padding:1%;
+    }
+
     .competence-button {
-        background: white;
-        border-radius: 0.25em;
-        border: #c3c3ff 1px solid;
         padding: 2%;
         font-size: xx-large;
         flex-direction: column;
     }
+
+    .competence-button {
+        --bg: #000;
+        --hover-bg: #ff90e8;
+        --hover-text: #000;
+        color: #2b2b2b;
+        cursor: pointer;
+        border: 1px solid var(--bg);
+        border-radius: 4px;
+        padding: 0.8em 2em;
+        background: var(--bg);
+        background-color: var(--bg-color);
+        transition: 0.2s;
+    }
+
+        .competence-button:hover {
+            color: var(--hover-text);
+            transform: translate(-0.25rem, -0.25rem);
+            background: var(--hover-bg);
+                box-shadow: 0.25rem 0.25rem var(--bg);
+        }
+
+        .competence-button:active {
+            transform: translate(0);
+            box-shadow: none;
+        }
+
 </style>
