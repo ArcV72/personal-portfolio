@@ -1,14 +1,44 @@
-﻿<div class="card @card_class" style="width: 18rem; ">
+﻿<div class="card @cardClass" style="width: 25rem; ">
 
     <h5 class="card-title">@title</h5>
     <div class="card-img-top">
-        <img src="@image_path" alt="..." style="width:100%;">
+        <img src="@imagePath" alt="..." style="width:100%;">
+    </div>
+    <div>
+        <p>@description</p>
+        <div>
+            @if (sources != null)
+            {
+                <a href="@sources">
+                    <button>
+                        <span class="material-symbols-outlined">
+                            code
+                        </span>
+                        Sources
+                    </button>
+                </a>
+            }
+            @if (demo != null)
+            {
+                <a href="@demo">
+                    <span class="material-symbols-outlined">
+                        play_arrow
+                    </span>
+                    <button>
+                        Demo
+                    </button>
+                </a>
+            }
+        </div>
     </div>
 </div>
 @code {
-    [Parameter] public string? image_path { get; set; }
+    [Parameter] public string? imagePath { get; set; }
     [Parameter] public string? title { get; set; }
-    [Parameter] public string? card_class { get; set; }
+    [Parameter] public string? description { get; set; }
+    [Parameter] public string? sources { get; set; }
+    [Parameter] public string? demo { get; set; }
+    [Parameter] public string? cardClass { get; set; }
 
     public class CardClass
     {

@@ -1,4 +1,6 @@
-﻿
+﻿@inject IJSRuntime JS
+
+
 <h1>Welcome to my portfolio!</h1>
 
 <div style="display:flex;">
@@ -28,27 +30,17 @@
 
     <img class="pic-of-me" src="./assets/img/Me!.jpg" alt="It's a picture of me" />
 </div>
+
+<button @onclick="DownloadFileFromURL" style="--bg-color: #f5dced; --hover-bg: #edc7e1;">
+    Download my CV
+</button>
+
 @code {
 
-
+    private async Task DownloadFileFromURL()
+    {
+        var fileName = "CV_Aro_Randriamanantena.pdf";
+        var fileURL = "assets/doc/CV_Aro_Randriamanantena_.pdf";
+        await JS.InvokeVoidAsync("triggerFileDownload", fileName, fileURL);
+    }
 }
-
-<style>
-    .pic-of-me {
-        max-width: 20rem;
-        height: fit-content;
-        align-self: center;
-        border-radius: 100%;
-    }
-
-    .about-me-info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: justify;
-    }
-
-    .about-me-info p {
-        padding-right:10%;
-    }
-</style>

@@ -1,5 +1,38 @@
-﻿<h1>Projects</h1>
+﻿@using portfolio_aro.Pages.Components
+<h1>Here are some of my favorite </h1>
+
+<div class="d-flex flex-row justify-content-around" style="flex-wrap:wrap;">
+    <Card imagePath="@graphmapImage" title="@graphmapTitle" description="@graphmapDescription" sources="@graphmapSources"></Card>
+    <Card imagePath="@snakeImage" title="@snakeTitle" description="@snakeDescription" sources="@snakeSources" demo="@snakeDemo"></Card>
+    <Card imagePath="@genshinoptimizerImage" title="@genshinoptimizerTitle" description="@genshinoptimizerDescription"></Card>
+    <Card imagePath="@phonebookImage" title="@phonebookTitle" description="@phonebookDescription" sources="@phonebookSources"></Card>
+    <Card imagePath="@iutwebsiteImage" title="@iutwebsiteTitle" description="@iutwebsiteDescription" sources="@iutwebsiteSources"></Card>
+</div>
 
 @code {
 
+    string graphmapImage = ".\\assets\\img\\graphmap.png";
+    string graphmapTitle = "GraphMap";
+    string graphmapDescription = "A SAE I made during my second semester where my teammate and I had to program an application capable of displaying and analyzing a graph";
+    string graphmapSources = "https://forge.univ-lyon1.fr/p2104784/sae-grama";
+
+    string snakeImage = ".\\assets\\img\\snake.png";
+    string snakeTitle = "Snake";
+    string snakeDescription = "My teammate and I had to recreate the iconic game that is the snake, but to add more fun to it we added levels and an harcore mode";
+    string snakeSources = "https://forge.univ-lyon1.fr/p2101845/projet-js-snake";
+    string snakeDemo = "https://snake-fe765.web.app/";
+
+    string genshinoptimizerImage = ".\\assets\\img\\genshin-optimizer.jpg";
+    string genshinoptimizerTitle = "Genshin Optimizer";
+    string genshinoptimizerDescription = "An android application that is currently still under development, it allows players of the game Genshin Impact to conserve and analyze other players profile, stats and character builds";
+
+    string phonebookImage = ".\\assets\\img\\phone-book.png";
+    string phonebookTitle = "Phone Book";
+    string phonebookDescription = "A SAE I made during my first semester, we had to make a phone book. Users can add new clients, modify existing client information, or delete client records from the system. Additionally, the system provides functionalities to display a complete list of all clients, search for specific clients, and identify those with incomplete data. Although filtering by data type is mentioned, this feature is not yet implemented. The program also allows users to sort client data and save it to a file for future reference.";
+    string phonebookSources = "https://forge.univ-lyon1.fr/p2104784/gestion-annuaire-telephonique";
+
+    string iutwebsiteImage = ".\\assets\\img\\phone-book.png";
+    string iutwebsiteTitle = "IUT website";
+    string iutwebsiteDescription = "A SAE I made during my first semester, we had to make a website to present the IUT and our cursus.";
+    string iutwebsiteSources = "https://forge.univ-lyon1.fr/p2104784/site-but-informatique";
 }

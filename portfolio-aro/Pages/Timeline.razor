@@ -1,0 +1,199 @@
+﻿<section id="timeline">
+    <article>
+        <div class="inner">
+            <span class="date">
+                <span class="month">Jun</span>
+                <span class="year">2021</span>
+            </span>
+            <h2>High school Baccalaureate</h2>
+            <p>
+                Peter Pan High School - Antananarivo, Madagascar <br />
+                Specialties : <br />
+                - Physics & Chemistry <br />
+                - Mathematics.
+            </p>
+        </div>
+    </article>
+    <article>
+        <div class="inner">
+            <span class="date">
+                <span class="month">Sept</span>
+                <span class="year">2021</span>
+            </span>
+            <h2>BUT Informatique</h2>
+            <p>
+                IUT Lyon 1 - Lyon, France <br />
+                3<sup>rd</sup> year specialized in application development: design, development and validation
+            </p>
+        </div>
+    </article>
+    <article>
+        <div class="inner">
+            <span class="date">
+                <span class="month">Aug</span>
+                <span class="year">2023</span>
+            </span>
+            <h2>Apprenticeship as a Junior Developer</h2>
+            <p>Isitec International - Millery, France</p>
+        </div>
+    </article>
+</section>
+@code {
+
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, sans-serif;
+    }
+
+    body {
+        background: #25303B;
+    }
+
+    section#timeline {
+        width: 80%;
+        margin: 20px auto;
+        position: relative;
+    }
+
+        section#timeline:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin: 0 0 0 -1px;
+            width: 2px;
+            height: 100%;
+            background: rgba(255,255,255,1);
+        }
+
+        section#timeline article {
+            width: 100%;
+            margin: 0 0 20px 0;
+            position: relative;
+            height:15em;
+        }
+
+            section#timeline article:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            section#timeline article div.inner {
+                width: 40%;
+                float: left;
+                margin: 5px 0 0 0;
+                border-radius: 6px;
+                box-shadow: 2px 2px #8b8b78;
+            }
+
+                section#timeline article div.inner span.date {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    margin: 0 0 0 -32px;
+                    border-radius: 100%;
+                    font-size: 12px;
+                    font-weight: 900;
+                    background: #25303B;
+                    box-shadow: 0 0 0 7px #25303B;
+                    align-content: center;
+                    color: rgba(255,255,255,0.5);
+                }
+
+                    section#timeline article div.inner span.date span {
+                        display: block;
+                        text-align: center;
+                    }
+
+
+                        section#timeline article div.inner span.date span.month {
+                            font-size: 18px;
+                        }
+
+
+                section#timeline article div.inner h2 {
+                    padding: 15px;
+                    margin: 0;
+                    color: #fff;
+                    font-size: 20px;
+                    letter-spacing: -1px;
+                    border-radius: 6px 6px 0 0;
+                    position: relative;
+                }
+
+                    section#timeline article div.inner h2:after {
+                        content: '';
+                        position: absolute;
+                        top: 20px;
+                        right: -5px;
+                        width: 10px;
+                        height: 10px;
+                        -webkit-transform: rotate(-45deg);
+                    }
+
+                section#timeline article div.inner p {
+                    padding: 15px;
+                    margin: 0;
+                    font-size: 14px;
+                    background: #fff;
+                    color: #656565;
+                    border-radius: 0 0 6px 6px;
+                }
+
+            section#timeline article:nth-child(2n+2) div.inner {
+                float: right;
+            }
+
+                section#timeline article:nth-child(2n+2) div.inner h2:after {
+                    left: -5px;
+                }
+
+            section#timeline article:nth-child(1) div.inner h2 {
+                background: #e74c3c;
+            }
+
+                section#timeline article:nth-child(1) div.inner h2:after {
+                    background: #e74c3c;
+                }
+
+            section#timeline article:nth-child(2) div.inner h2 {
+                background: #2ecc71;
+            }
+
+                section#timeline article:nth-child(2) div.inner h2:after {
+                    background: #2ecc71;
+                }
+
+            section#timeline article:nth-child(3) div.inner h2 {
+                background: #e67e22;
+            }
+
+                section#timeline article:nth-child(3) div.inner h2:after {
+                    background: #e67e22;
+                }
+
+            section#timeline article:nth-child(4) div.inner h2 {
+                background: #1abc9c;
+            }
+
+                section#timeline article:nth-child(4) div.inner h2:after {
+                    background: #1abc9c;
+                }
+
+            section#timeline article:nth-child(5) div.inner h2 {
+                background: #9b59b6;
+            }
+
+                section#timeline article:nth-child(5) div.inner h2:after {
+                    background: #9b59b6;
+                }
+</style>
