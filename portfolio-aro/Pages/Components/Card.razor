@@ -1,11 +1,18 @@
-﻿<div class="card @cardClass" style="width: 25rem; ">
+﻿<div class="card @cardClass" style="width: 18rem;">
+    <div class="card-header" >
 
-    <h5 class="card-title">@title</h5>
-    <div class="card-img-top">
+        <h5 class="card-title">@title</h5>
+    </div>
+    <div class="card-img-top" style="    width: 100%;
+    height: 10em;">
         <img src="@imagePath" alt="..." style="width:100%;">
     </div>
-    <div>
+    <div class="card-body">
+
         <p>@description</p>
+
+    </div>
+    <div class="card-footer text-body-secondary">
         <div>
             @if (sources != null)
             {
@@ -31,6 +38,7 @@
             }
         </div>
     </div>
+
 </div>
 @code {
     [Parameter] public string? imagePath { get; set; }
@@ -46,5 +54,17 @@
         public const string ANIME = "card-animes";
     }
 
+
 }
+<style>
+    .card-img-top{
+        height: 25%;
+        overflow: hidden;
+    }
+
+    .card-body{
+        height: 10em;
+        overflow: auto;
+    }
+</style>
 
