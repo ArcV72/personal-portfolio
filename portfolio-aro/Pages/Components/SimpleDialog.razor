@@ -1,14 +1,25 @@
 ﻿
 
-<MudDialog>
+<MudDialog TitleClass="dialog-title" ClassContent="dialog-content">
     <TitleContent>
-        @Title
+        <h2>@Title</h2>
     </TitleContent>
     <DialogContent>
-        @Content
-
+        <h3>What is it?</h3>
+        <p>@Content</p>
+        <br />
+        <h3>Related Projects</h3>
+        <ul>
+        @foreach(var project in Projects)
+        {
+            <li>
+                    <strong>@project.projectName : </strong>@project.relation
+            </li>
+        }
+        </ul>
 
     </DialogContent>
+        
 </MudDialog>
 
 @code {
@@ -20,6 +31,24 @@
     [Parameter]
     public string Content { get; set; }
     [Parameter]
-    public string Projects { get; set; }
+    public List<ProjectRelation> Projects { get; set; }
+
+    public class ProjectRelation
+    {
+        public string projectName;
+        public string relation;
+    }
+
+    
 }
+
+<style>
+    .dialog-content{
+        text-align: justify;
+        margin: 5%;
+    }
+    .dialog-title {
+        background: beige;
+    }
+</style>
 
