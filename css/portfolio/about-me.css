@@ -1,0 +1,29 @@
+﻿.pic-of-me {
+    max-width: 20rem;
+    height: fit-content;
+    align-self: center;
+    border-radius: 100%;
+}
+
+.about-me-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: justify;
+    animation: about-me-info-move-in 500ms forwards;
+}
+
+
+    .about-me-info p {
+        padding-right: 10%;
+    }
+
+@keyframes about-me-info-move-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

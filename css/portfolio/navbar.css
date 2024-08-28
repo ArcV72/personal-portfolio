@@ -1,0 +1,20 @@
+﻿.portfolio-navbar {
+    width: 100%;
+    background-color: cadetblue;
+}
+
+.navbar {
+    background: #dcdcf5;
+    position: fixed;
+    top: 0;
+    z-index: 1020;
+    width: 100%;
+    padding-left:1%;
+    padding-right:1%;
+}
+
+    .navbar button {
+        font-size:1.5em;
+        font-weight: bold;
+        color: #2f2f2f;
+    }
